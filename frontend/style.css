@@ -1,0 +1,1789 @@
+
+/* ========================================
+   MEMORA - COMPLETE STYLESHEET
+======================================== */
+
+/* 1. Basic Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Website Colours and Fonts */
+
+body {
+    background-color: #f8f5ee;
+    color: #26382b;
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+/* 3. Hero Section */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        linear-gradient(
+            rgba(25, 40, 29, 0.70),
+            rgba(25, 40, 29, 0.70)
+        ),
+        url("Images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fffdf8;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #f2d9a0;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 82px);
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.9;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    font-weight: 500;
+}
+
+/* 4. Explore Button */
+
+.explore-btn {
+    display: inline-block;
+    background-color: #314b38;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #526b50;
+}
+
+/* 5. Collections Sections */
+
+.collections {
+    margin: 60px auto;
+    padding: 0 30px;
+    max-width: 1000px;
+}
+
+.collections h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    color: #74796f;
+    margin-bottom: 25px;
+}
+
+/* 6. Travel Cards */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    flex: 1 1 260px;
+    max-width: 350px;
+    background-color: #fffdf8;
+    padding: 14px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(38, 56, 43, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(38, 56, 43, 0.16);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    display: block;
+    cursor: pointer;
+}
+
+.card h3 {
+    color: #26382b;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #74796f;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.card a {
+    color: #526b50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.trip-location {
+    color: #a17c48;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+/* 7. Navigation Bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background-color: #f8f5ee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #26382b;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+    color: #26382b;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a17c48;
+}
+
+.nav-links a.active {
+    color: #a17c48;
+    font-weight: bold;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: #a17c48;
+}
+
+/* 8. Music Section */
+
+.music-section {
+    padding-top: 30px;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.song-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    background-color: #fffdf8;
+    border: 1px solid #e9e2d4;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(38, 56, 43, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.song-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(38, 56, 43, 0.15);
+}
+
+.song-card.selected {
+    border: 2px solid #a17c48;
+    background-color: #f3eee3;
+    box-shadow: 0 8px 25px rgba(161, 124, 72, 0.2);
+}
+
+.song-art {
+    min-width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #314b38, #78896b);
+    border-radius: 14px;
+    color: #e9d8b4;
+    font-size: 42px;
+}
+
+.song-card.selected .song-art {
+    background: linear-gradient(135deg, #a17c48, #d1b783);
+    color: #26382b;
+}
+
+.song-info {
+    min-width: 0;
+}
+
+.song-category {
+    color: #a17c48;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.song-info h3 {
+    color: #26382b;
+    font-size: 19px;
+    margin-bottom: 3px;
+}
+
+.song-artist {
+    color: #74796f;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.song-link {
+    display: inline-block;
+    color: #526b50;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.song-link:hover {
+    color: #a17c48;
+    text-decoration: underline;
+}
+
+/* 9. Footer */
+
+.footer {
+    background-color: #26382b;
+    color: #fffdf8;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 70px;
+}
+
+.footer h3 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #d5d8ce;
+    margin-bottom: 8px;
+}
+
+.footer .copyright {
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.footer .creator {
+    margin-top: 20px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.footer .creator span {
+    color: #e9d8b4;
+    font-weight: bold;
+}
+
+/* 10. Photo Lightbox */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(20, 28, 22, 0.92);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    color: #e9d8b4;
+}
+
+/* 11. Authentication Buttons */
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 24px;
+}
+
+.login-btn,
+.signup-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.login-btn {
+    color: #252525;
+    background: transparent;
+    border: 1px solid rgba(37, 37, 37, 0.25);
+}
+
+.login-btn:hover {
+    background: rgba(37, 37, 37, 0.07);
+}
+
+.signup-btn {
+    color: #fff;
+    background: #252525;
+    border: 1px solid #252525;
+}
+
+.signup-btn:hover {
+    background: #444;
+    transform: translateY(-1px);
+}
+
+/* 12. Authentication Overlay */
+
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(18, 18, 18, 0.65);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.auth-overlay.active {
+    display: flex;
+}
+
+/* 13. Authentication Modal */
+
+.auth-modal {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding: 42px 36px;
+    border-radius: 22px;
+    background: #fffdf9;
+    color: #252525;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+    animation: authAppear 0.25s ease;
+}
+
+@keyframes authAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.auth-close {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #555;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.auth-close:hover {
+    background: #eee9e1;
+}
+
+.auth-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.auth-brand {
+    margin: 0 0 20px;
+    color: #a66a48;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.auth-heading h2 {
+    margin: 0 0 10px;
+    font-size: 29px;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+}
+
+.auth-heading > p:last-child {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 14. Authentication Form */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group[hidden] {
+    display: none !important;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #383838;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 14px;
+    border: 1px solid #dedad3;
+    border-radius: 10px;
+    background: #fff;
+    color: #252525;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #aaa49c;
+}
+
+.form-group input:focus {
+    border-color: #a66a48;
+    box-shadow: 0 0 0 3px rgba(166, 106, 72, 0.12);
+}
+
+.auth-submit {
+    width: 100%;
+    min-height: 49px;
+    margin-top: 6px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #252525;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.auth-submit:hover {
+    background: #a66a48;
+    transform: translateY(-1px);
+}
+
+.auth-submit:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+.auth-message {
+    display: none;
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.auth-message:not(:empty) {
+    display: block;
+}
+
+.auth-message.success {
+    color: #247446;
+}
+
+.auth-message.error {
+    color: #b42318;
+}
+
+.auth-switch {
+    margin: 24px 0 0;
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.auth-switch button {
+    margin-left: 4px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #a66a48;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-switch button:hover {
+    text-decoration: underline;
+}
+
+/* 15. User Dashboard */
+
+.dashboard[hidden] {
+    display: none !important;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 7% 80px;
+    color: #252525;
+    background: #fffdf9;
+    min-height: 65vh;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.dashboard-label {
+    color: #a66a48;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.dashboard-header h2 {
+    margin: 14px 0;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+}
+
+.dashboard-header h2 span {
+    color: #a66a48;
+}
+
+.dashboard-description {
+    color: #777;
+    line-height: 1.7;
+}
+
+.logout-btn {
+    padding: 11px 20px;
+    border: 1px solid #d8d0c6;
+    border-radius: 30px;
+    background: transparent;
+    color: #252525;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #252525;
+    border-color: #252525;
+    color: white;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.dashboard-card {
+    padding: 30px 26px;
+    border: 1px solid #eee6dc;
+    border-radius: 18px;
+    background: white;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(50, 40, 30, 0.08);
+}
+
+.dashboard-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 24px;
+    border-radius: 15px;
+    background: #f4ebe2;
+    font-size: 25px;
+}
+
+.dashboard-card h3 {
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+.dashboard-card p {
+    min-height: 52px;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.collection-btn {
+    margin-top: 18px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #a66a48;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.collection-btn:hover {
+    color: #252525;
+}
+
+.dashboard-note {
+    margin-top: 32px;
+    padding: 22px;
+    border-radius: 14px;
+    background: #f7f2ec;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   16. MEMORA - MY TRIPS SECTION
+======================================== */
+
+.my-trips-section {
+    width: min(1100px, calc(100% - 40px));
+    margin: 55px auto;
+    padding: 42px;
+    background: #fffdf8;
+    border: 1px solid #e8e2d6;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(38, 56, 43, 0.06);
+}
+
+.trips-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.trips-heading h2 {
+    margin: 8px 0;
+    color: #26382b;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.2;
+}
+
+.trips-heading p {
+    margin-top: 8px;
+    color: #74796f;
+    line-height: 1.7;
+}
+
+.trips-heading .dashboard-label {
+    color: #a17c48;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* Create Trip Button */
+
+#create-trip-btn {
+    flex: 0 0 auto;
+    padding: 12px 21px;
+    border: 1px solid #314b38;
+    border-radius: 30px;
+    background: #314b38;
+    color: #fffdf8;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#create-trip-btn:hover {
+    background: #526b50;
+    transform: translateY(-2px);
+}
+
+/* Create / Edit Forms */
+
+#create-trip-form,
+.inline-edit-form {
+    width: 100%;
+    max-width: 650px;
+    padding: 26px;
+    margin: 24px 0 32px;
+    border: 1px solid #e8e2d6;
+    border-radius: 15px;
+    background: #f8f5ee;
+}
+
+#create-trip-form h3,
+.inline-edit-form h3 {
+    margin-bottom: 18px;
+    color: #26382b;
+    font-size: 22px;
+}
+
+.trip-form-group,
+.inline-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trip-form-group {
+    margin-bottom: 17px;
+}
+
+.trip-form-group label,
+.inline-edit-form label {
+    color: #435747;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.trip-form-group input,
+.trip-form-group textarea,
+.inline-edit-form input,
+.inline-edit-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #dcd8cc;
+    border-radius: 9px;
+    background: #fffdf8;
+    color: #26382b;
+    font: inherit;
+    outline: none;
+}
+
+.trip-form-group input:focus,
+.trip-form-group textarea:focus,
+.inline-edit-form input:focus,
+.inline-edit-form textarea:focus {
+    border-color: #526b50;
+    box-shadow: 0 0 0 3px rgba(82, 107, 80, 0.10);
+}
+
+.trip-form-group textarea,
+.inline-edit-form textarea {
+    resize: vertical;
+}
+
+#save-trip-btn,
+.inline-edit-form .trip-edit-btn {
+    padding: 11px 20px;
+    border: 1px solid #314b38;
+    border-radius: 25px;
+    background: #314b38;
+    color: white;
+    cursor: pointer;
+}
+
+#save-trip-btn:hover,
+.inline-edit-form .trip-edit-btn:hover {
+    background: #526b50;
+}
+
+#cancel-trip-btn,
+.trip-cancel-btn {
+    padding: 10px 18px;
+    border: 1px solid #cfcfc2;
+    border-radius: 25px;
+    background: transparent;
+    color: #435747;
+    cursor: pointer;
+}
+
+/* Saved Trip Cards */
+
+.saved-trips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 25px;
+    margin-top: 28px;
+}
+
+.saved-trip-card {
+    min-width: 0;
+    padding: 25px;
+    align-self: start;
+    box-sizing: border-box;
+    border: 1px solid #e8e2d6;
+    border-radius: 16px;
+    background: #fffdf8;
+    box-shadow: 0 6px 22px rgba(38, 56, 43, 0.055);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.saved-trip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 13px 30px rgba(38, 56, 43, 0.10);
+}
+
+.saved-trip-card h3 {
+    margin-bottom: 10px;
+    color: #26382b;
+    font-size: 22px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.saved-trip-card p {
+    margin: 8px 0;
+    color: #74796f;
+    font-size: 14px;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+#trip-message {
+    margin: 12px 0;
+    color: #74796f;
+    font-size: 14px;
+}
+
+/* Trip Action Buttons */
+
+.trip-card-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.trip-card-actions button {
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    white-space: normal;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.trip-edit-btn {
+    border: 1px solid #314b38;
+    background: #314b38;
+    color: white;
+}
+
+.trip-edit-btn:hover {
+    background: #526b50;
+}
+
+.trip-delete-btn,
+.trip-delete-photo-btn {
+    border: 1px solid #d9b9ae;
+    background: #fffdf8;
+    color: #9b5148;
+}
+
+.trip-delete-btn:hover,
+.trip-delete-photo-btn:hover {
+    background: #fbefeb;
+}
+
+.trip-photo-btn {
+    border: 1px solid #e2d8c5;
+    background: #eee8dc;
+    color: #314b38;
+}
+
+.trip-photo-btn:hover {
+    background: #e3dac9;
+}
+
+.trip-view-btn {
+    border: 1px solid #aebba7;
+    background: #fffdf8;
+    color: #526b50;
+}
+
+.trip-view-btn:hover {
+    background: #edf1e9;
+}
+
+/* Photo Gallery */
+
+.trip-photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    margin-top: 22px;
+}
+
+.trip-photo-gallery[hidden] {
+    display: none !important;
+}
+
+.trip-photo-item {
+    min-width: 0;
+    padding: 7px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #e8e2d6;
+    border-radius: 10px;
+    background: #f8f5ee;
+}
+
+.trip-photo-item img {
+    display: block;
+    width: 100%;
+    height: 145px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.trip-delete-photo-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ========================================
+   17. Responsive Design
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#travel,
+#music {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 850px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .my-trips-section {
+        width: calc(100% - 30px);
+        padding: 28px 22px;
+    }
+
+    .saved-trips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trips-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .auth-buttons {
+        gap: 7px;
+        margin-left: auto;
+    }
+
+    .login-btn,
+    .signup-btn {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .auth-modal {
+        padding: 38px 24px 28px;
+        border-radius: 18px;
+    }
+
+    .auth-heading h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        justify-content: center;
+    }
+
+    .card {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: 5px;
+    }
+
+    .collections {
+        padding: 0 20px;
+        margin: 40px auto;
+    }
+
+    .collections h2 {
+        font-size: 26px;
+    }
+
+    .dashboard {
+        padding: 70px 6% 55px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 26px 22px;
+    }
+}
+
+@media (max-width: 450px) {
+    .my-trips-section {
+        padding: 23px 16px;
+    }
+
+    .saved-trip-card {
+        padding: 20px;
+    }
+
+    .trip-card-actions {
+        gap: 8px;
+    }
+
+    .trip-photo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .song-card {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .song-art {
+        min-width: 65px;
+        height: 65px;
+        font-size: 32px;
+    }
+
+    .song-info h3 {
+        font-size: 16px;
+    }
+
+    .auth-buttons {
+        gap: 5px;
+    }
+
+    .login-btn,
+    .signup-btn {
+        padding: 8px 10px;
+    }
+}
+
+/* Always respect HTML hidden attributes */
+
+[hidden] {
+    display: none !important;
+}
+
+
+
+/* ========================================
+   MEMORA - PREMIUM DASHBOARD HEADER
+======================================== */
+
+.dashboard-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 22px;
+    margin-bottom: 42px;
+    border-bottom: 1px solid #e8e2d6;
+}
+
+.dashboard-logo {
+    color: #26382b;
+    font-size: 31px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.dashboard-logo span {
+    color: #a17c48;
+}
+
+.dashboard-brand p {
+    color: #a17c48;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+}
+
+.dashboard-welcome {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    min-height: 210px;
+    padding: 38px 42px;
+    margin-bottom: 42px;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #26382b, #526b50);
+    color: #fffdf8;
+}
+
+.dashboard-eyebrow {
+    color: #e9d8b4;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.dashboard-welcome h1 {
+    color: #fffdf8;
+    font-size: clamp(29px, 4vw, 43px);
+    line-height: 1.2;
+    margin-bottom: 13px;
+}
+
+.dashboard-welcome p:last-child {
+    max-width: 520px;
+    color: #e3e7df;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.welcome-decoration {
+    color: rgba(233, 216, 180, 0.8);
+    font-size: 110px;
+    padding-right: 25px;
+}
+
+.dashboard-header {
+    margin-bottom: 35px;
+}
+
+.dashboard-header h2 {
+    color: #26382b;
+}
+
+.dashboard-header h2 span {
+    color: #a17c48;
+}
+
+.dashboard-card {
+    border: 1px solid #e8e2d6;
+    background: #fffdf8;
+    border-radius: 18px;
+}
+
+.dashboard-card:hover {
+    border-color: #c9b994;
+}
+
+.dashboard-icon {
+    background: #eee8dc;
+    color: #314b38;
+}
+
+.collection-btn {
+    color: #526b50;
+}
+
+.collection-btn:hover {
+    color: #a17c48;
+}
+
+@media (max-width: 600px) {
+    .dashboard-brand {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .dashboard-welcome {
+        padding: 28px 23px;
+        min-height: 190px;
+    }
+
+    .welcome-decoration {
+        position: absolute;
+        right: 8px;
+        bottom: 5px;
+        font-size: 65px;
+        opacity: 0.45;
+    }
+}
+
+
+/* ========================================
+   MEMORA — PREMIUM PERSONAL DASHBOARD
+======================================== */
+
+.dashboard {
+    max-width: 1250px;
+    margin: auto;
+    padding: 45px 6% 75px;
+    background: #f8f5ee;
+    color: #26382b;
+}
+
+/* Brand Bar */
+
+.dashboard-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 22px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #e5dfd2;
+}
+
+.dashboard-logo {
+    color: #26382b;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.dashboard-logo span {
+    color: #a17c48;
+}
+
+.dashboard-brand .logout-btn {
+    padding: 10px 20px;
+    border: 1px solid #c9c9b9;
+    border-radius: 30px;
+    background: transparent;
+    color: #314b38;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.dashboard-brand .logout-btn:hover {
+    background: #314b38;
+    color: white;
+}
+
+/* Hero Banner */
+
+.dashboard-hero {
+    position: relative;
+    min-height: 340px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #314b38;
+}
+
+.dashboard-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dashboard-hero-overlay {
+    position: relative;
+    z-index: 1;
+    min-height: 340px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 45px 55px;
+    background: linear-gradient(
+        90deg,
+        rgba(24, 39, 29, 0.88),
+        rgba(24, 39, 29, 0.48),
+        rgba(24, 39, 29, 0.08)
+    );
+    color: white;
+}
+
+.dashboard-eyebrow {
+    margin-bottom: 16px;
+    color: #e9d8b4;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.dashboard-hero h1 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+.dashboard-hero-overlay > p:last-child {
+    max-width: 480px;
+    color: #f0eee7;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Personal Welcome */
+
+.dashboard-intro {
+    margin: 48px 0 42px;
+}
+
+.dashboard-intro .dashboard-label,
+.collections-heading .dashboard-label {
+    margin-bottom: 8px;
+    color: #a17c48;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.dashboard-intro h2 {
+    margin-bottom: 8px;
+    color: #26382b;
+    font-size: clamp(25px, 3vw, 34px);
+}
+
+.dashboard-intro h2 span {
+    color: #a17c48;
+}
+
+.dashboard-intro > div > p:last-child {
+    color: #77796f;
+    font-size: 14px;
+}
+
+/* Collections Heading */
+
+.collections-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.collections-heading h2 {
+    color: #26382b;
+    font-size: 27px;
+}
+
+.collections-star {
+    color: #b18c55;
+    font-size: 30px;
+}
+
+/* Collection Cards */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.dashboard-card {
+    min-width: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #e8e2d6;
+    border-radius: 17px;
+    background: #fffdf8;
+    box-shadow: 0 5px 20px rgba(38, 56, 43, 0.045);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(38, 56, 43, 0.10);
+}
+
+.dashboard-card-image {
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    color: #fffdf8;
+}
+
+.dashboard-card-image > span {
+    font-size: 46px;
+}
+
+.dashboard-card-image p {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.travel-cover {
+    background: linear-gradient(140deg, #314b38, #71866a);
+}
+
+.photos-cover {
+    background: linear-gradient(140deg, #947b60, #c2a98a);
+}
+
+.music-cover {
+    background: linear-gradient(140deg, #494a40, #89856d);
+}
+
+.dashboard-card-content {
+    padding: 24px;
+}
+
+.dashboard-card-content h3 {
+    margin-bottom: 9px;
+    color: #26382b;
+    font-size: 22px;
+}
+
+.dashboard-card-content > p {
+    min-height: 70px;
+    color: #77796f;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.dashboard-card .collection-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px 0 0;
+    border: none;
+    border-top: 1px solid #e8e2d6;
+    background: transparent;
+    color: #526b50;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dashboard-card .collection-btn:hover {
+    color: #a17c48;
+}
+
+.dashboard-card .collection-btn span {
+    font-size: 18px;
+}
+
+/* Dashboard Note */
+
+.dashboard-note {
+    margin-top: 35px;
+    padding: 19px 22px;
+    border: 1px solid #e8e2d6;
+    border-radius: 12px;
+    background: #fffdf8;
+    color: #77796f;
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard {
+        padding: 28px 18px 55px;
+    }
+
+    .dashboard-hero,
+    .dashboard-hero-overlay {
+        min-height: 300px;
+    }
+
+    .dashboard-hero-overlay {
+        padding: 30px 24px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card-image {
+        min-height: 145px;
+    }
+
+    .dashboard-intro {
+        margin: 35px 0;
+    }
+}
+
+
+/* DASHBOARD CARD IMAGE STYLING */
+
+.dashboard-card-image {
+    position: relative;
+    min-height: 175px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.dashboard-card-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    transition: transform 0.5s ease;
+}
+
+.dashboard-card:hover .dashboard-card-image img {
+    transform: scale(1.07);
+}
+
+.dashboard-card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(20, 30, 23, 0.25),
+        rgba(20, 30, 23, 0.65)
+    );
+    z-index: -1;
+}
+
+.dashboard-card-image > span,
+.dashboard-card-image > p {
+    position: relative;
+    z-index: 1;
+    color: #fffdf8;
+}
+
+.dashboard-card-image > p {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================
+   MEMORA - WIDER PREMIUM DASHBOARD
+===================================== */
+
+.dashboard {
+    width: calc(100% - 60px);
+    max-width: 1600px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 45px 5% 75px;
+
+    background:
+        radial-gradient(
+            circle at 3% 12%,
+            rgba(190, 174, 139, 0.16),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 97% 75%,
+            rgba(91, 119, 91, 0.12),
+            transparent 28%
+        ),
+        #f8f5ee;
+
+    border: 1px solid rgba(180, 160, 125, 0.18);
+    border-radius: 24px;
+}
+
+/* Give dashboard sections more breathing room */
+
+.dashboard-hero {
+    min-height: 380px;
+    border-radius: 24px;
+}
+
+.dashboard-hero-overlay {
+    min-height: 380px;
+}
+
+.dashboard-intro {
+    margin: 55px 0 48px;
+}
+
+.dashboard-grid {
+    gap: 28px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+    .dashboard {
+        width: calc(100% - 24px);
+        margin: 12px auto;
+        padding: 28px 18px 45px;
+        border-radius: 16px;
+    }
+
+    .dashboard-hero,
+    .dashboard-hero-overlay {
+        min-height: 300px;
+    }
+}

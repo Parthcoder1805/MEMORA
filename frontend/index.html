@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMORA | My Personal Collections</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <a href="#" class="logo">MEMORA.</a>
+<div class="nav-links">
+    <a href="#" class="nav-link active">Home</a>
+    <a href="#travel" class="nav-link">Travel</a>
+    <a href="#music" class="nav-link">Music</a>
+</div>
+
+<div class="auth-buttons">
+    <button type="button" class="login-btn" id="open-login">
+        Log In
+    </button>
+
+    <button type="button" class="signup-btn" id="open-signup">
+        Sign Up
+    </button>
+</div>
+</nav>
+
+
+<!-- Hero Section -->
+    <header class="hero">
+    <div class="hero-content">
+        <p class="hero-label">A PERSONAL COLLECTION OF MOMENTS</p>
+
+        <h1>MEMORA</h1>
+
+        <p class="hero-description">
+            Some moments fade. The beautiful ones stay forever.
+            A little corner of the internet for my journeys,
+            favourite songs, and stories worth remembering.
+        </p>
+
+        <a href="#travel" class="explore-btn">
+            Explore My Memories ↓
+        </a>
+    </div>
+</header>
+
+
+
+<!-- User Dashboard -->
+<section class="dashboard" id="dashboard" hidden>
+
+    <!-- Top Brand Bar -->
+    <div class="dashboard-brand">
+        <a href="#" class="dashboard-logo">MEMORA<span>.</span></a>
+        <button type="button" class="logout-btn" id="logout-btn">
+            Log Out ↗
+        </button>
+    </div>
+
+    <!-- Welcome Banner -->
+    <div class="dashboard-hero">
+        <img src="Images/manali.jpg" alt="Beautiful mountain landscape">
+
+        <div class="dashboard-hero-overlay">
+            <p class="dashboard-eyebrow">YOUR WORLD. YOUR STORIES.</p>
+
+            <h1>Welcome to your<br>little corner.</h1>
+
+            <p>
+                A place for all the places you've been,
+                the moments you've captured, and the songs you've loved.
+            </p>
+        </div>
+    </div>
+
+    <!-- Personal Welcome -->
+    <div class="dashboard-intro">
+        <div>
+            <p class="dashboard-label">YOUR PERSONAL SPACE</p>
+            <h2>Welcome back, <span id="dashboard-user">Dreamer</span> ♡</h2>
+            <p>Every memory deserves a place of its own.</p>
+        </div>
+    </div>
+
+    <!-- Collections -->
+    <div class="dashboard-collections">
+
+        <div class="collections-heading">
+            <div>
+                <p class="dashboard-label">MADE OF MEMORIES</p>
+                <h2>Your Collections</h2>
+            </div>
+            <span class="collections-star">✦</span>
+        </div>
+
+        <div class="dashboard-grid">
+
+            <article class="dashboard-card">
+                <div class="dashboard-card-image travel-cover">
+    <img src="Images/travel-cover.png" alt="Mountain travel landscape">
+                    <span>✈</span>
+                    <p>PLACES & JOURNEYS</p>
+                </div>
+
+                <div class="dashboard-card-content">
+                    <h3>Travel Diaries</h3>
+                    <p>Your journeys, destinations and stories waiting to be remembered.</p>
+
+                    <button type="button" class="collection-btn"
+                            data-collection="trips">
+                        Explore Trips <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="dashboard-card">
+                <div class="dashboard-card-image photos-cover">
+<img src="Images/photo-memories-cover.png" alt="Vintage camera and travel photographs">                    <span>▧</span>
+                    <p>MOMENTS & FRAMES</p>
+                </div>
+
+                <div class="dashboard-card-content">
+                    <h3>Photo Memories</h3>
+                    <p>Little moments, beautiful frames and photographs to keep forever.</p>
+
+                    <button type="button" class="collection-btn"
+                            data-collection="photos">
+                        Explore Photos <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="dashboard-card">
+                <div class="dashboard-card-image music-cover">
+    <img src="Images/music-cover.png" alt="Vintage music player and headphones">
+                    <span>♫</span>
+                    <p>MELODIES & FEELINGS</p>
+                </div>
+
+                <div class="dashboard-card-content">
+                    <h3>Music Library</h3>
+                    <p>Songs that bring back feelings, people and unforgettable days.</p>
+
+                    <button type="button" class="collection-btn"
+                            data-collection="music">
+                        Explore Music <span>↗</span>
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="dashboard-note" id="dashboard-note">
+        Your memories are waiting to be collected. ♡
+    </div>
+
+</section>
+
+    
+    <!-- Travel Memories Section -->
+    <section class="collections" id="travel">
+    <h2>My Travel Memories</h2>
+
+    <p class="section-intro">
+        Places I've been, people I've met, memories I'll keep.
+    </p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <img src="Images/manali.jpg" alt="Mountain scenery in Manali">
+
+            <p class="trip-location">HIMACHAL PRADESH</p>
+
+            <h3>Manali Diaries</h3>
+
+            <p>
+                Mountain air, peaceful mornings and views
+                that make you forget everything else.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="Images/pondicherry.jpg" alt="Beach scenery in Pondicherry">
+
+            <p class="trip-location">PUDUCHERRY</p>
+
+            <h3>Coastal Days</h3>
+
+            <p>
+                Ocean breeze, colourful streets and
+                slow moments by the sea.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="Images/ooty.jpg" alt="Green hills in Ooty">
+
+            <p class="trip-location">TAMIL NADU</p>
+
+            <h3>Little Escapes</h3>
+
+            <p>
+                Misty hills, green landscapes and
+                little moments worth remembering.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Music Section -->
+    <section class="collections music-section" id="music">
+    <h2>Sounds That Stay</h2>
+
+    <p class="section-intro">
+        Some songs become memories of their own.
+    </p>
+
+    <div class="music-grid">
+
+        <article class="song-card">
+            <div class="song-art">
+                <span>♫</span>
+            </div>
+
+            <div class="song-info">
+                <p class="song-category">FAVOURITE SONG</p>
+
+                <h3>Agar Tum Saath Ho</h3>
+
+                <p class="song-artist">
+                    Alka Yagnik & Arijit Singh
+                </p>
+
+                <a
+                    href="https://www.youtube.com/watch?v=sK7riqg2mr4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="song-link"
+                >
+                    Listen on YouTube ↗
+                </a>
+            </div>
+        </article>
+        <article class="song-card">
+    <div class="song-art">
+        <span>♫</span>
+    </div>
+
+    <div class="song-info">
+        <p class="song-category">FAVOURITE SONG</p>
+        <h3>Ilahi</h3>
+        <p class="song-artist">Arijit Singh</p>
+
+        <a href="https://www.youtube.com/watch?v=fdubeMFwuGs&list=RDfdubeMFwuGs&start_radio=1"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="song-link">
+            Listen on YouTube ↗
+        </a>
+    </div>
+</article>
+
+<article class="song-card">
+    <div class="song-art">
+        <span>♫</span>
+    </div>
+
+    <div class="song-info">
+        <p class="song-category">FAVOURITE SONG</p>
+        <h3>Kho Gaye Hum Kahan</h3>
+        <p class="song-artist">Jasleen Royal & Prateek Kuhad</p>
+
+        <a href="https://www.youtube.com/watch?v=vt4jX0iRgCg&list=RDvt4jX0iRgCg&start_radio=1"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="song-link">
+            Listen on YouTube ↗
+        </a>
+    </div>
+</article>
+    </div>
+</section>
+<!-- Authentication Modal -->
+<div class="auth-overlay" id="auth-overlay">
+    <div class="auth-modal">
+
+        <button type="button" class="auth-close" id="close-auth"
+                aria-label="Close login form">
+            &times;
+        </button>
+
+        <div class="auth-heading">
+            <p class="auth-brand">MEMORA.</p>
+            <h2 id="auth-title">Welcome Back</h2>
+            <p id="auth-subtitle">
+                Sign in to revisit your memories.
+            </p>
+        </div>
+
+        <form id="auth-form">
+
+            <div class="form-group" id="name-group" hidden>
+                <label for="auth-name">Your Name</label>
+                <input
+                    type="text"
+                    id="auth-name"
+                    name="name"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="auth-email">Email Address</label>
+                <input
+                    type="email"
+                    id="auth-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="auth-password">Password</label>
+                <input
+                    type="password"
+                    id="auth-password"
+                    name="password"
+                    placeholder="At least 8 characters"
+                    minlength="8"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <p class="auth-message" id="auth-message"
+               role="status" aria-live="polite"></p>
+
+            <button type="submit" class="auth-submit" id="auth-submit">
+                Log In
+            </button>
+
+        </form>
+
+        <p class="auth-switch">
+            <span id="switch-text">Don't have an account?</span>
+            <button type="button" id="switch-auth">
+                Sign Up
+            </button>
+        </p>
+
+    </div>
+</div>
+<!-- Photo Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close photo">
+        &times;
+    </button>
+
+    <img src="" alt="" id="lightbox-image">
+</div>
+<footer class="footer">
+    <h3>MEMORA.</h3>
+
+    <p>A little corner of my world.</p>
+
+    <p class="creator">
+        Crafted with love & memories by <span>Parth</span> ♡
+    </p>
+
+    <p class="copyright">
+        &copy; 2026 MEMORA. All rights reserved.
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
